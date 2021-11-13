@@ -7,9 +7,9 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_home">Главная</string>
+    <string name="menu_users">Подопечные</string>
+    <string name="menu_user_details">Детализация сведений</string>
     <!-- Preference Titles -->
     <string name="messages_header">Messages</string>
     <string name="sync_header">Sync</string>
@@ -25,4 +25,7 @@
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
     <string name="menu_settings_label">Настройки</string>
+    <string name="fab_contentDescription">написать сообщение</string>
+    <string name="iv_userListItem_contentDescription">Аватарка пользователя</string>
+    <string name="tv_userListItem_text_plug">Имя пользователя</string>
 </resources>

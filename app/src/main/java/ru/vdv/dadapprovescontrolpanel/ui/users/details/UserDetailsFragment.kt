@@ -1,4 +1,4 @@
-package ru.vdv.dadapprovescontrolpanel.ui.slideshow
+package ru.vdv.dadapprovescontrolpanel.ui.users.details
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,11 +7,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import ru.vdv.dadapprovescontrolpanel.databinding.FragmentSlideshowBinding
+import ru.vdv.dadapprovescontrolpanel.databinding.FragmentUserDetailsBinding
 
-class SlideshowFragment : Fragment() {
+class UserDetailsFragment : Fragment() {
 
-    private var _binding: FragmentSlideshowBinding? = null
+    private var _binding: FragmentUserDetailsBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -23,12 +23,12 @@ class SlideshowFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         val slideshowViewModel =
-            ViewModelProvider(this).get(SlideshowViewModel::class.java)
+            ViewModelProvider(this).get(UserDetailsViewModel::class.java)
 
-        _binding = FragmentSlideshowBinding.inflate(inflater, container, false)
+        _binding = FragmentUserDetailsBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textSlideshow
+        val textView: TextView = binding.stubTextFragmentUserDetails
         slideshowViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }

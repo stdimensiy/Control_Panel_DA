@@ -1,10 +1,10 @@
-package ru.vdv.dadapprovescontrolpanel.ui.gallery
+package ru.vdv.dadapprovescontrolpanel.ui.users
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class GalleryViewModel : ViewModel() {
+class UsersViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
         value = "This is gallery Fragment"
