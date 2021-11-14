@@ -15,4 +15,10 @@ interface BaseUserItemView {
      * @param url  - адрес (URL) нахождения файла изображения (аватара пользователя)
      */
     fun setImageAvatar(url: String)
+
+    /**
+     * Метод устанавливает кастомную картинку фона карточки пользователя
+     * @param url  - адрес (URL) нахождения файла изображения (фоно пользователя)
+     */
+    fun setCustomBackgroundImage(url: String)
 }

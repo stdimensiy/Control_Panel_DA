@@ -13,8 +13,18 @@ class UsersAdapter(
     private val imageLoader: IImageLoader<ImageView>
 ) : RecyclerView.Adapter<UsersViewHolder>() {
     private val users = listOf(
-        User("Артем", "https://dadapproves.ru/usercontent/avatars/da0000002.jpg"),
-        User("Виктория", "https://dadapproves.ru/usercontent/avatars/da0000003.jpg"))
+        User(
+            "Артем",
+            "https://dadapproves.ru/usercontent/avatars/da0000002.jpg",
+            "https://dadapproves.ru/usercontent/bg/da_bg0000002.jpg"
+        ),
+        User(
+            "Виктория",
+            "https://dadapproves.ru/usercontent/avatars/da0000003.jpg",
+            "https://dadapproves.ru/usercontent/bg/da_bg0000003.jpg"
+        )
+    )
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UsersViewHolder =
         UsersViewHolder(
             UsersListItemBinding.inflate(

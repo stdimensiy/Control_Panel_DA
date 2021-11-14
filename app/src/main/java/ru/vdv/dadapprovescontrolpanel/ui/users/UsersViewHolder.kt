@@ -21,4 +21,8 @@ class UsersViewHolder(
         imageLoader.loadInfo(url, ivUserAvatar)
         Log.d("Моя проверка", "UsersViewHolder / сработал setImageAvatar")
     }
+
+    override fun setCustomBackgroundImage(url: String) {
+        //TODO("Not yet implemented")
+    }
 }

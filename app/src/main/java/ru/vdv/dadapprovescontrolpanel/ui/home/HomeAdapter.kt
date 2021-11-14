@@ -13,8 +13,16 @@ class HomeAdapter(
     private val imageLoader: IImageLoader<ImageView>
 ) : RecyclerView.Adapter<HomeViewHolder>() {
     private val users = listOf(
-        User("Артем", "https://dadapproves.ru/usercontent/avatars/da0000002.jpg"),
-        User("Виктория", "https://dadapproves.ru/usercontent/avatars/da0000003.jpg")
+        User(
+            "Артем",
+            "https://dadapproves.ru/usercontent/avatars/da0000002.jpg",
+            "https://dadapproves.ru/usercontent/bg/da_bg0000002.jpg"
+        ),
+        User(
+            "Виктория",
+            "https://dadapproves.ru/usercontent/avatars/da0000003.jpg",
+            "https://dadapproves.ru/usercontent/bg/da_bg0000003.jpg"
+        )
     )
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeViewHolder {
@@ -32,6 +40,7 @@ class HomeAdapter(
         user.name.let {
             holder.setName(user.name)
             holder.setImageAvatar(user.avatarUrl)
+            holder.setCustomBackgroundImage(user.backgroundUrl)
         }
 
     }

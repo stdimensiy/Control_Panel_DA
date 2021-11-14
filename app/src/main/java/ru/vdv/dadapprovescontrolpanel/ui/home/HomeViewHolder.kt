@@ -22,4 +22,10 @@ class HomeViewHolder(
             imageLoader.loadInfo(url, ivUserAvatar)
             Log.d("Моя проверка", "HomeViewHolder  / сработал setImageAvatar")
         }
+
+    override fun setCustomBackgroundImage(url: String): Unit =
+        with(vb) {
+            imageLoader.loadBg(url, ivUserCustomBgImage)
+            Log.d("Моя проверка", "HomeViewHolder  / сработал setImageAvatar")
+        }
 }

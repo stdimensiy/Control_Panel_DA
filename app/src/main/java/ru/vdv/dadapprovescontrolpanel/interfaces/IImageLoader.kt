@@ -6,4 +6,5 @@ package ru.vdv.dadapprovescontrolpanel.interfaces
 
 interface IImageLoader<T> {
     fun loadInfo(url: String, compiler: T)
+    fun loadBg(url: String, container: T)
 }
