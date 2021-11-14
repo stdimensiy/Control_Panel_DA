@@ -3,12 +3,18 @@ package ru.vdv.dadapprovescontrolpanel.ui.users
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import ru.vdv.dadapprovescontrolpanel.databinding.UsersListItemBinding
 import ru.vdv.dadapprovescontrolpanel.domain.User
+import ru.vdv.dadapprovescontrolpanel.interfaces.IImageLoader
 
-class UsersAdapter() : RecyclerView.Adapter<UsersViewHolder>() {
-    private val users = listOf<User>(User("Артем"), User("Виктория"))
+class UsersAdapter(
+    val imageLoader: IImageLoader<ImageView>
+) : RecyclerView.Adapter<UsersViewHolder>() {
+    private val users = listOf<User>(
+        User("Артем", "https://dadapproves.ru/usercontent/avatars/da0000002.jpg"),
+        User("Виктория", "https://dadapproves.ru/usercontent/avatars/da0000003.jpg"))
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UsersViewHolder =
         UsersViewHolder(
             UsersListItemBinding.inflate(
@@ -21,6 +27,7 @@ class UsersAdapter() : RecyclerView.Adapter<UsersViewHolder>() {
         val user = users[position]
         user.name.let {
             holder.setName(user.name)
+            holder.setImageAvatar(user.avatarUrl, imageLoader)
         }
     }
 

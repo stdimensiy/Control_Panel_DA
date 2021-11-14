@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import ru.vdv.dadapprovescontrolpanel.databinding.FragmentUsersBinding
+import ru.vdv.dadapprovescontrolpanel.glide.GlideImageLoader
 
 class UsersFragment : Fragment() {
 
@@ -35,7 +36,7 @@ class UsersFragment : Fragment() {
             textView.text = it
         }
         binding.rvUsers.layoutManager = LinearLayoutManager(context)
-        adapter = UsersAdapter()
+        adapter = UsersAdapter(GlideImageLoader())
         binding.rvUsers.adapter = adapter
         return root
     }
