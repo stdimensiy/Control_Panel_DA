@@ -26,7 +26,7 @@ class UsersFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         val galleryViewModel =
-            ViewModelProvider(this).get(UsersViewModel::class.java)
+            ViewModelProvider(this)[UsersViewModel::class.java]
 
         _binding = FragmentUsersBinding.inflate(inflater, container, false)
         val root: View = binding.root
