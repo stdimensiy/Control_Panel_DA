@@ -1,10 +1,12 @@
 package ru.vdv.dadapprovescontrolpanel.ui.home
 
+import android.graphics.Color
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
+import app.futured.donut.DonutSection
 import ru.vdv.dadapprovescontrolpanel.databinding.HomeListItemBinding
 import ru.vdv.dadapprovescontrolpanel.domain.User
 import ru.vdv.dadapprovescontrolpanel.interfaces.IImageLoader
@@ -41,6 +43,20 @@ class HomeAdapter(
             holder.setName(user.name)
             holder.setImageAvatar(user.avatarUrl)
             holder.setCustomBackgroundImage(user.backgroundUrl)
+            val section1 = DonutSection(
+                name = "section_1",
+                color = Color.parseColor("#FB1D32"),
+                amount = 1f
+            )
+
+            val section2 = DonutSection(
+                name = "section_2",
+                color = Color.parseColor("#FFB98E"),
+                amount = 2f
+            )
+
+            holder.setDonatChartData(section1, section2)
+            holder.setDonatChartData2(section1, section2)
         }
 
     }

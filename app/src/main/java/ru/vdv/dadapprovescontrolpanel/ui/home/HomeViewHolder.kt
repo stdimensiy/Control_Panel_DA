@@ -3,6 +3,7 @@ package ru.vdv.dadapprovescontrolpanel.ui.home
 import android.util.Log
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
+import app.futured.donut.DonutSection
 import ru.vdv.dadapprovescontrolpanel.databinding.HomeListItemBinding
 import ru.vdv.dadapprovescontrolpanel.interfaces.BaseUserItemView
 import ru.vdv.dadapprovescontrolpanel.interfaces.IImageLoader
@@ -27,5 +28,21 @@ class HomeViewHolder(
         with(vb) {
             imageLoader.loadBg(url, ivUserCustomBgImage)
             Log.d("Моя проверка", "HomeViewHolder  / сработал setImageAvatar")
+        }
+
+    fun setDonatChartData(section1: DonutSection, section2: DonutSection): Unit =
+        with(vb) {
+            donutView.cap = 5f
+            donutView.gapAngleDegrees =-45f
+            donutView.gapWidthDegrees = 60f
+            donutView.submitData(listOf(section1, section2))
+    }
+
+    fun setDonatChartData2(section1: DonutSection, section2: DonutSection): Unit =
+        with(vb) {
+            donutView2.cap = 5f
+            donutView2.gapAngleDegrees =-45f
+            donutView2.gapWidthDegrees = 60f
+            donutView2.submitData(listOf(section1, section2))
         }
 }
